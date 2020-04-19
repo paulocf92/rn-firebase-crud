@@ -1,10 +1,9 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, StyleSheet, Button } from 'react-native';
 
 export default function Home({ navigation }) {
   return (
-    <View>
-      <Text>Home Screen</Text>
+    <View style={styles.container}>
       <Button
         title="Add an Item"
         onPress={() => navigation.navigate('AddItem')}
@@ -17,3 +16,10 @@ export default function Home({ navigation }) {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+});
